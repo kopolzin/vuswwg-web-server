@@ -6,8 +6,8 @@ The VUSWWG provides several public web services, including access to a Blazegrap
 
 [diagram of publically-accessible Nginx in front of secured Blazegraph and BaseX]
 
-[link to Nginx setup]
+[Nginx setup](nginx-setup.md)
 
-[link to Blazegraph setup]
+[Blazegraph setup](blazegraph-setup.md)
 
-[link to example CURL commands]
+[Example CURL commands](curl-commands.md)
