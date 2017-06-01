@@ -1,9 +1,10 @@
-## Note: The default database file for Blazegraph is located at:
-`/opt/tomcat/temp/bigdata.jnl`
+### Default database location
+The default database file for Blazegraph is located at `/opt/tomcat/temp/bigdata.jnl`.
 
-## Modify the GUI by editing /opt/tomcat/webapps/bg/html/index.html
-### (Where "bg" is the context name given to Blazegraph in Jelastic)
-### Comment out the following sections like so:
+You may wish to back up this file or monitor its size when loading large datasets.
+
+### Modify the Blazegraph GUI
+Edit `/opt/tomcat/webapps/bg/html/index.html`, where "bg" is the context name given to Blazegraph in Jelastic. Comment out the following sections like so (look for the \<!-- and --\>):
 ```
 <td width = "20%" border = "0" align = "right" valign = "middle" id = "nopad">
     <!--form id="search-form"><label for="search-text">SEARCH:</label> <input type="text" id="search-text"><button type="submit"><span>&nbsp;</span></button></form-->
@@ -22,3 +23,5 @@
     <p>Current namespace: <span id="current-namespace"></span></p>
 </div>
 ```
+
+To further customize the GUI you may edit other files in the `/opt/tomcat/webapps/bg/html/` directory.
