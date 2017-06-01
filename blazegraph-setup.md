@@ -1,3 +1,4 @@
+[Return to Table of Contents](README.md)
 ### Default database location
 The default database file for Blazegraph is located at `/opt/tomcat/temp/bigdata.jnl`.
 
