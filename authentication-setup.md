@@ -1,3 +1,5 @@
+[Return to Table of Contents](README.md)
+### Basic Authentication
 Changes to the Blazegraph database are protected by basic authentication. This is enabled by modifying two files: one containing a list of usernames and encrypted passwords and the other an Nginx configuration file.
 
 ### Encrypted passwords
