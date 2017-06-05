@@ -13,7 +13,10 @@ conf.d/reverse-proxy.conf
 ### See reverse-proxy.conf for the full configuration file.
 
 #### Edit /etc/nginx/conf.d/reverse-proxy.conf:
-`client_max_body_size 500m`
+```
+client_max_body_size 500m
+large_client_header_buffers 4 32k
+```
 
 ### Force HTTPS:
 ```
