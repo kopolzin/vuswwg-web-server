@@ -27,7 +27,7 @@ Click the gear icon to the right of `nginx.conf` (or whichever file you would li
 #### Add the line:
 `include /etc/nginx/conf.d/*.conf;`
 
-### Create and edit file `/etc/nginx/conf.d/reverse-proxy.conf`
+### Create and edit the file `/etc/nginx/conf.d/reverse-proxy.conf`
 
 On the `Nginx : config` tab, click on the `conf.d` directory.<br>
 ![Open conf.d](screenshots/nginx-4-conf.d-directory.png)
