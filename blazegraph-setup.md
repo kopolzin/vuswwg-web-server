@@ -22,22 +22,22 @@ You may wish to back up this file or monitor its size when loading large dataset
 ### Modify the Blazegraph GUI
 First, a short visual guide for modifying Blazegraph files within Jelastic.
 
-Locate the Tomcat instance in the Jelastic UI. Click the wrench to access config settings.
+Locate the Tomcat instance in the Jelastic UI. Click the wrench to access config settings.<br>
 ![Tomcat config](screenshots/tomcat-1-config.png)
 
-In the new `Tomcat : Config` tab that opened, click on the `webapps` directory.
+In the new `Tomcat : Config` tab that opened, click on the `webapps` directory.<br>
 ![Tomcat webapps](screenshots/tomcat-2-webapps.png)
 
-To the right of the `bg` (substitute your namespace if you didn't use bg) directory click the gear icon then click Open. Alternatively, you can just double-click on the `bg` text to open the directory.
+To the right of the `bg` (substitute your namespace if you didn't use bg) directory click the gear icon then click Open. Alternatively, you can just double-click on the `bg` text to open the directory.<br>
 ![Tomcat open bg](screenshots/tomcat-3-open-bg.png)
 
-Click on the gear icon to the right of `html` and then click Open. Alternatively, double-click on the `html` directory.
+Click on the gear icon to the right of `html` and then click Open. Alternatively, double-click on the `html` directory.<br>
 ![Tomcat open html](screenshots/tomcat-4-open-html.png)
 
-Click on the gear icon to the right of `index.html` and then click Open. Alternatively, double-click on the `index.html` file to open it.
+Click on the gear icon to the right of `index.html` and then click Open. Alternatively, double-click on the `index.html` file to open it.<br>
 ![Tomcat open index.html](screenshots/tomcat-5-open-index.html.png)
 
-Make changes to the file and save it when finished.
+Make changes to the file and save it when finished.<br>
 ![Tomcat edit index.html](screenshots/tomcat-6-edit-index.html.png)
 
 Edit `/opt/tomcat/webapps/bg/html/index.html`, where "bg" is the context name given to Blazegraph in Jelastic. Comment out the following sections like so (look for the \<!-- and --\>):
