@@ -7,7 +7,7 @@ Locate and click on the `Change environment topology` icon in the Jelastic UI. I
 
 Add Nginx above your Tomcat server, as shown in the screenshot. Make sure `Public IPv4` is turned on. If your Tomcat server had a public IPv4 you may turn it off for Tomcat now. Set the server scaling limits to your preferences, such as 1 reserved within a scaling limit of 2 as shown in the screenshot. Click Apply.
 
-**Warning: Turning Nginx off and on will likely cause it to lose its Public IPv4 address.**<br>
+**Warning: Turning Nginx off and on through the 'Change environment topology' screen will likely cause it to lose its Public IPv4 address.**<br>
 ![Add nginx](screenshots/add-nginx.png)
 
 ### Edit the file `/etc/nginx/nginx.conf`
@@ -49,3 +49,11 @@ See [https-setup.md](https-setup.md)
 
 #### Set up basic authentication:
 See [authentication-setup.md](authentication-setup.md).
+
+### Restart Nginx
+
+After editing Nginx configuration files it is necessary to restart Nginx for the changes to take effect. Move your mouse to the right of the Nginx appliance text and icons will appear. Click on the curved green arrow labeled 'Restart nodes'.<br>
+![Restart Nginx](screenshots/nginx-6-restart.png)
+
+To confirm that Nginx restarted properly, click on the '\<environment name\> : nginx : actions' tab. If it says 'Starting nginx [ OK ]' it restarted properly. If it failed to restart, double-check any configuration changes you made; there is likely a syntax error.<br>
+![Restart OK](screenshots/nginx-7-restart-ok.png)
