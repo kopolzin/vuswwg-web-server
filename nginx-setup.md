@@ -44,6 +44,30 @@ Create a new file named `reverse-proxy.conf` within the /etc/nginx/conf.d/ direc
 client_max_body_size 500m;
 large_client_header_buffers 4 32k;
 ```
+#### Simplify URLs for users so they may use e.g. https://an.example.com/ to access the internal path https://an.example.com/subpath/:
+By default Blazegraph and other Tomcat applications are accessible through a subpath. If you want users to be able to access a service from the root of the domain without the subpath do the following.
+
+In all location blocks that you want redirected to /subpath/, include the subpath in proxy_pass:
+```
+location / {
+    ...
+    proxy_pass http://default_upstream/subpath/$request_uri;
+}
+...
+location ^~ /sparql {
+    ...
+    proxy_pass http://default_upstream/subpath/$request_uri;
+}
+```
+
+#### If you want to allow cross-origin resource sharing (CORS) for SPARQL queries:
+```
+location ^~ /sparql {
+    ...
+    add_header Access-Control-Allow-Origin *;
+}
+```
+
 #### Set up HTTPS on the Jelastic server:
 See [https-setup.md](https-setup.md)
 
