@@ -60,4 +60,9 @@ Edit `/opt/tomcat/webapps/bg/html/index.html`, where "bg" is the context name gi
 </div>
 ```
 
+### Further customizations
 To further customize the GUI you may edit other files in the `/opt/tomcat/webapps/bg/html/` directory.
+
+### Enable UTF-8
+You must explicitly set Tomcat to use UTF-8. This is done in Tomcat's `server.xml` file by adding `URIEncoding="UTF-8"` in the `<Connector port="8080" />` block.<br>
+![UTF-8 in Tomcat](screenshots/tomcat-7-enable-utf-8.png)
